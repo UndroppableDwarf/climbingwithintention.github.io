@@ -101,7 +101,9 @@ a:hover {
 }  
 @media (prefers-color-scheme: dark) {
 body {
-  background-image: url('chalky_gym.jpeg');
+  background-color: #1c1b18;
+  background-image: url("chalky_gym.jpeg");
+  color: #eee;
 }
   .content-wrapper,
   .section,
