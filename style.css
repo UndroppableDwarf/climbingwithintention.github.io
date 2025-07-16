@@ -1,45 +1,74 @@
-
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #baa67c;
-  color: #333;
-  line-height: 1.6;
+  background: url("cederberg_waterfall.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
 }
-nav ul {
-  list-style: none;
-  background: #837e49;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
-.section {
-  padding: 2rem;
+
+/* Wrapper to center and contain your site content */
+.content-wrapper {
   max-width: 900px;
   margin: auto;
+  background-color: rgba(201,187,162, 0.92);
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+/* Optional: Make the nav more readable too */
+nav {
+  background-color: rgba(186, 166, 124, 0.5);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(186, 166, 124, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+nav ul li a:hover {
+  color: #ab5b38;
+  text-decoration: underline;
 }
 header {
-  background: #837e49;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-footer {
-  background: #837e49;
-  text-align: center;
-  font-size: 0.9rem;
-  color: white;
+  margin-bottom: 2rem;
 }
 a {
-  color: #f7e7ce;
+  color: #ab5b38; /* warm, earthy tone to match site style */
+  text-decoration: none;
+  font-weight: 500;
 }
+
+a:hover {
+  color: #81442a; /* optional darker tone for hover effect */
+  text-decoration: underline;
+}
+
+
+
