@@ -98,6 +98,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
+}  
 @media (prefers-color-scheme: dark) {
 body {
   background-image: url('chalky_gym.jpeg');
@@ -128,5 +129,4 @@ body {
   .coach-card img {
     border: 2px solid #f5e1c0;
   }
-}
 }
