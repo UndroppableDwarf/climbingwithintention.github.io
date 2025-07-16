@@ -99,6 +99,20 @@ a:hover {
     align-items: center;
   }
 }
+@media (prefers-color-scheme: dark) {
+  body, .content-wrapper, .section, nav, footer {
+    background-color: rgba(201,187,162, 0.92) !important;
+    color: #333 !important;
+  }
+
+  a {
+    color: #ab5b38 !important;
+  }
+
+  a:hover {
+    color: #81442a !important;
+  }
+}
 
 
 
