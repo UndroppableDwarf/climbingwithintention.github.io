@@ -20,30 +20,67 @@
     <header>
       <h1>Frequently Asked Questions</h1>
     </header>
-    <section class="section">
-      <div class="faq">
-<p><strong>Do I need to be strong or athletic to start climbing?</strong><br>
-    Not at all! You don’t need any prior experience or strength. Whether it’s your first time on the wall or you’re returning after a break, everyone has a place to begin. Climbing is adaptable and we’ll meet you where you are.</p>
+<section class="section">
+  <div class="faq">
 
-    <p><strong>What should I bring to a session?</strong><br>
-    Wear comfortable clothes that allow you to move freely and bring water. If you don’t have your own climbing shoes, you can rent a pair at the gym. If you’re not a member of the gym, you’ll also need to pay for a day pass — prices are listed on <a href="https://www.bloc11.co.za/" target="_blank">Bloc 11’s website</a>.</p>
-
-    <p><strong>Where do sessions take place?</strong><br>
-    Most sessions happen at Bloc 11 in Cape Town. If needed, we can discuss alternative gyms or even outdoor sessions depending on the season and your goals.</p>
-
-    <p><strong>Can I book recurring sessions or get a package deal?</strong><br>
-    Yes! You can book recurring sessions, and we offer discounted rates for packages — although this may depend on the coach you wish to book through, please feel free to contact them to enquire!</p>
-
-    <p><strong>What if I'm scared of falling or failing?</strong><br>
-    You're not alone — fear is a normal part of climbing. We'll take things at your pace. Coaching includes mindset support, helping you grow through fear, not avoid it.</p>
-
-    <p><strong>What happens if I need to cancel?</strong><br>
-    We have a 24-hour cancellation policy. If you cancel less than 24 hours before your session, the full fee still applies.</p>
-
-    <p><strong>Can I train even if I’m injured or limited?</strong><br>
-    Yes — as long as it’s medically safe, we can adapt. I’ll help you train around injuries and focus on recovery, strength-building, or technique development, depending on what’s right for you.</p>
+    <div class="faq-item">
+      <p><strong>Do I need to be strong or athletic to start climbing?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>Not at all! You don’t need any prior experience or strength. Whether it’s your first time on the wall or you’re returning after a break, everyone has a place to begin. Climbing is adaptable and we’ll meet you where you are.</p>
       </div>
-    </section>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>What should I bring to a session?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>Wear comfortable clothes that allow you to move freely and bring water. If you don’t have your own climbing shoes, you can rent a pair at the gym. If you’re not a member of the gym, you’ll also need to pay for a day pass — prices are listed on <a href="https://www.bloc11.co.za/" target="_blank">Bloc 11’s website</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>Where do sessions take place?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>Most sessions happen at Bloc 11 in Cape Town. If needed, we can discuss alternative gyms or even outdoor sessions depending on the season and your goals.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>Can I book recurring sessions or get a package deal?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>Yes! You can book recurring sessions, and we offer discounted rates for packages — although this may depend on the coach you wish to book through, please feel free to contact them to enquire!</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>What if I'm scared of falling or failing?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>You're not alone — fear is a normal part of climbing. We'll take things at your pace. Coaching includes mindset support, helping you grow through fear, not avoid it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>What happens if I need to cancel?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>We have a 24-hour cancellation policy. If you cancel less than 24 hours before your session, the full fee still applies.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <p><strong>Can I train even if I’m injured or limited?</strong></p>
+      <button class="toggle-answer">Show Answer</button>
+      <div class="faq-answer" style="display: none;">
+        <p>Yes — as long as it’s medically safe, we can adapt. I’ll help you train around injuries and focus on recovery, strength-building, or technique development, depending on what’s right for you.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
   </div>
   <script>
     const html = document.documentElement;
@@ -71,6 +108,17 @@
         localStorage.setItem('theme', 'dark');
       }
     });
+  </script>
+  <script>
+  document.querySelectorAll('.toggle-answer').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isVisible = answer.style.display === 'block';
+
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Show Answer' : 'Hide Answer';
+    });
+  });
   </script>
 </body>
 </html>
