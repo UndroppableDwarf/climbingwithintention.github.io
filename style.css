@@ -167,6 +167,13 @@ p {
   background-color: var(--card-bg, rgba(50, 50, 50, 0.55));
   transition: box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.coach-info {
+  padding: 1rem;
+  text-align: left;
+  display: block;
 }
 
 .coach-header {
@@ -194,16 +201,21 @@ p {
   margin-top: 0.5rem;
 }
 
-.coach-info {
-  padding: 1rem;
-  text-align: left;
-  display: block;
-}
-
 .hidden {
   display: none;
 }
 
+.hide-btn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #e49d6b;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hide-btn:hover {
+  background-color: #e49d6b;
+}
 /* ----- FAQ TOGGLE ----- */
 .faq-item {
   margin-bottom: 1.5rem;
@@ -228,23 +240,6 @@ p {
 }
 
 /* ----- RESPONSIVE STYLES ----- */
-@media (max-width: 768px) {
-  .coach-info {
-    display: none;
-    position: static;
-    background: #f7f7f7;
-    color: #333;
-  }
-
-  .coach-card:hover .coach-info {
-    display: none;
-  }
-
-  .coach-toggle {
-    display: block;
-  }
-}
-
 @media (max-width: 600px) {
   p {
     max-width: 95%;
