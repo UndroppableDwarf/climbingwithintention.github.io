@@ -19,26 +19,29 @@
     </nav>
 
     <section class="section">
-      <h2>Book a coaching Session</h2>
-      <p>I am available for bookings only at Bloc 11 South in Diep River from Monday - Tuesday and then only at Bloc 11 North in Paarden Eiland from Wednesday - Friday</p>
+      <h2>Book a Coaching Session</h2>
+      <p>I am available for bookings only at Bloc 11 South in Diep River from Monday - Tuesday and then only at Bloc 11 North in Paarden Eiland from Wednesday - Friday.</p>
       <p>You can book a one hour or two hour coaching session below:</p>
 
-      <h3>Bloc 11 South bookings:</h3>
+      <h2>Bloc 11 South bookings:</h2>
+      <button class="toggle-answer" onclick="toggleCalendly('south-booking')" data-label="South Bookings">Show South Bookings</button>
+      <div id="south-booking" style="display: none; margin-top: 1rem;">
+        <h3>One Hour Session</h3>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/one-hour-coaching-session-south?background_color=aba190" style="min-width:320px;height:700px;"></div>
 
+        <h3>Two Hour Session</h3>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/two-hour-coaching-session-south?background_color=aba190" style="min-width:320px;height:700px;"></div>
+      </div>
 
-      <h3>One Hour Session</h3>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/one-hour-coaching-session-south?background_color=aba190" style="min-width:320px;height:700px;"></div>
+      <h2>Bloc 11 North bookings:</h2>
+      <button class="toggle-answer" onclick="toggleCalendly('north-booking')" data-label="North Bookings">Show North Bookings</button>
+      <div id="north-booking" style="display: none; margin-top: 1rem;">
+        <h3>One Hour Session</h3>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/30min?background_color=aba190" style="min-width:320px;height:700px;"></div>
 
-      <h3>Two Hour Session</h3>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/two-hour-coaching-session-south?background_color=aba190" style="min-width:320px;height:700px;"></div>
-
-      <h3>Bloc 11 North bookings:</h3>
-
-      <h3>One Hour Session</h3>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/30min?background_color=aba190" style="min-width:320px;height:700px;"></div>
-
-      <h3>Two Hour Session</h3>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/two-hour-coaching-session?background_color=aba190" style="min-width:320px;height:700px;"></div>
+        <h3>Two Hour Session</h3>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/climbingwithintention/two-hour-coaching-session?background_color=aba190" style="min-width:320px;height:700px;"></div>
+      </div>
 
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
@@ -69,6 +72,15 @@
         localStorage.setItem('theme', 'dark');
       }
     });
+  </script>
+  <script>
+  function toggleCalendly(id) {
+    const section = document.getElementById(id);
+    const button = event.target;
+    const isVisible = section.style.display === "block";
+    section.style.display = isVisible ? "none" : "block";
+    button.textContent = isVisible ? "Show " + button.dataset.label : "Hide " + button.dataset.label;
+  }
   </script>
 </body>
 </html>
